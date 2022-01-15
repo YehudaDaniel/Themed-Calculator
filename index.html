@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/desktopStyle.css" type="text/css">
+  
+  <title>Yehuda | Calculator app</title>
+</head>
+<body>
+
+<main>
+
+  <div id="calculator">
+    <div id="calculator__theme">
+      <span id="calculator__theme_name">calc</span>
+      <div id="calculator__theme_toggleBtn">
+        <div class="toggleBtn">
+          <span id="toggleBtn__header">THEME</span>
+          <div class="toggleBtn__bar">
+            <div class="littleDot"></div>
+            <input type="radio" name="toggle" checked="checked">
+            <input type="radio" name="toggle" checked="">
+            <input type="radio" name="toggle" checked="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="calculator__result">
+      <input type="text" placeholder="" id="result"/>
+    </div>
+    <div class="calculator__numbers">
+      <div class="calculator__numbers_line">
+        <input type="button" value="7" data-number />
+        <input type="button" value="8" data-number />
+        <input type="button" value="9" data-number />
+        <input type="button" value="DEL" id="del" name="del" data-delete/>
+      </div>
+
+      <div class="calculator__numbers_line">
+        <input type="button" value="4" data-number />
+        <input type="button" value="5" data-number />
+        <input type="button" value="6" data-number />
+        <input type="button" value="+" data-operator />
+      </div>
+
+      <div class="calculator__numbers_line">
+        <input type="button" value="1" data-number />
+        <input type="button" value="2" data-number />
+        <input type="button" value="3" data-number />
+        <input type="button" value="-" data-operator />
+      </div>
+
+      <div class="calculator__numbers_line">
+        <input type="button" value="." data-number />
+        <input type="button" value="0" data-number />
+        <input type="button" value="/" data-operator />
+        <input type="button" value="x" data-operator />
+      </div>
+      
+      <div id="calculator__bottom_line">
+        <input type="button" value="RESET" data-reset />
+        <input type="button" value="=" data-sum />
+      </div>
+    </div>
+  </div>
+
+<script src="scripts/calculator.js"></script>
+<script src="scripts/toggleBtn.js"></script>
+<script src="scripts/theme.js"></script>
+</main>
+
+</body>
+</html>

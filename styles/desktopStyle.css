@@ -1,0 +1,201 @@
+/*Style file for the calculator website, desktop size*/
+
+:root{
+    --main-background: hsl(222, 26%, 31%);
+    --toggleKeypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+
+    --key-background: hsl(225, 21%, 49%);
+    --key-shadow: hsl(224, 28%, 35%);
+
+    --keyToggle-background: hsl(6, 63%, 50%);
+    --keyToggle-shadow: hsl(6, 70%, 34%);
+
+    --key-background-2: hsl(30, 25%, 89%);
+    --key-shadow-2: hsl(28, 16%, 65%);
+
+    --text-1: hsl(221, 14%, 31%);
+
+    --fontSize-numbers: 32px;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Spartan', sans-serif;
+    background: var(--main-background);
+    font-size: 32px;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+/* calculators main container */
+#calculator{
+    margin: 0 auto;
+    min-width: 400px;
+}
+
+/* calculator's toggle line */
+
+#calculator__theme{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+
+#calculator__theme_name, #toggleBtn__header{
+    color: white;
+}
+
+#calculator__theme_name{
+    font-size: 28px;
+}
+
+/* ------------------------------------- */
+
+/* calculator's theme toggle */
+
+.toggleBtn{
+    display: flex;
+}
+#toggleBtn__header{
+    font-size: 12px;
+    margin: 10px 10px 0 0;
+}
+.toggleBtn__bar{
+    background: var(--toggleKeypad-background);
+    border-radius: 20px;
+    position: relative;
+    width: 105px;
+}
+.littleDot{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    top: 0;
+    left: 0px;
+    transform: translate(50%, 50%);
+    background: red;
+    transition: 0.5s;
+}
+.toggleBtn__bar>input[type="radio"]{
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    outline: none;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* ------------------------------------- */
+
+/* calculator's result */
+#calculator__result{
+    background: var(--screen-background);
+    border-radius: 10px;
+    padding: 30px 15px;
+}
+#calculator__result>input{
+    width: 100%;
+    font-size: 32px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: 'Spartan', sans-serif;
+    text-align: right;
+}
+
+/* ------------------------------------- */
+
+/* calculator's numbers button */
+.calculator__numbers{
+    background: var(--toggleKeypad-background);
+    border-radius: 10px;
+    padding: 30px 15px;
+    margin-top: 15px;
+}
+
+/* style for all the lines of numbers */
+.calculator__numbers_line{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.calculator__numbers_line>input{
+    flex: 1;
+    font-size: 32px;
+    margin: 10px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background: var(--key-background-2);
+    box-shadow: 0px 3px 4px 0px var(--key-shadow-2);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.calculator__numbers_line>input:active{
+    opacity: 0.8;
+}
+
+#del{
+    font-size: 18px;
+    background: var(--key-background);
+    box-shadow: 0px 3px 4px 0px var(--key-shadow);
+    color: white;
+}
+
+/* ----------------------------------- */
+
+/* calculator's bottom line */
+
+#calculator__bottom_line{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#calculator__bottom_line>input{
+    flex: 1;
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px 0;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#calculator__bottom_line>input:nth-child(1){
+    color: white;
+    background: var(--key-background);
+    box-shadow: 0px 3px 4px 0px var(--key-shadow);
+}
+
+#calculator__bottom_line>input:nth-child(2){
+    color: white;
+    background: var(--keyToggle-background);
+    box-shadow: 0px 3px 4px 0px var(--keyToggle-shadow);
+}
+
+#calculator__bottom_line>input:active{
+    opacity: 0.8;
+}

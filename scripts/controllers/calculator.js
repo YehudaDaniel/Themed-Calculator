@@ -113,45 +113,34 @@ Calculator.prototype.updateResult = function() {
 }
 
 
-//the buttons of the calculator, by order
-const numberBtn = document.querySelectorAll('[data-number]');
-const operationsBtn = document.querySelectorAll('[data-operator]');
-const sumBtn = document.querySelector('[data-sum]');
-const resetBtn = document.querySelector('[data-reset]');
-const deleteBtn = document.querySelector('[data-delete]');
-//the result of the calculator
-let previous = 0;
-const result = document.querySelector('#result');
-
-
 //Creating calculator class
-const calculator = new Calculator(previous, result);
+// const calculator = new Calculator(previous, result);
 
-numberBtn.forEach(function(button) {
-    button.addEventListener('click', function() {
-        calculator.appendToScreen(button.getAttribute('value'));
-        calculator.updateResult();
-    });
-});
+// numberBtn.forEach(function(button) {
+//     button.addEventListener('click', function() {
+//         calculator.appendToScreen(button.getAttribute('value'));
+//         calculator.updateResult();
+//     });
+// });
 
-operationsBtn.forEach(function(button) {
-    button.addEventListener('click', function() {
-        calculator.operators(button.getAttribute('value'));
-        calculator.updateResult();
-    });
-});
+// operationsBtn.forEach(function(button) {
+//     button.addEventListener('click', function() {
+//         calculator.operators(button.getAttribute('value'));
+//         calculator.updateResult();
+//     });
+// });
 
-sumBtn.addEventListener('click', function() {
-    calculator.calc();
-    calculator.updateResult();
-});
+// sumBtn.addEventListener('click', function() {
+//     calculator.calc();
+//     calculator.updateResult();
+// });
 
-resetBtn.addEventListener('click', function() {
-    calculator.clear();
-    calculator.updateResult();
-});
+// resetBtn.addEventListener('click', function() {
+//     calculator.clear();
+//     calculator.updateResult();
+// });
 
-deleteBtn.addEventListener('click', function() {
-    calculator.delete();
-    calculator.updateResult();
-});
+// deleteBtn.addEventListener('click', function() {
+//     calculator.delete();
+//     calculator.updateResult();
+// });

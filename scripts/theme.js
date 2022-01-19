@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', function(event) {
     const toggles = document.querySelectorAll('.toggleBtn__bar>input[type="radio"]');
 
+    if(localStorage.getItem('theme')) {
+        useTheme(localStorage.getItem('theme'));
+    }else {
+        localStorage.setItem('theme', 'Theme3');
+        useTheme(localStorage.getItem('theme'));
+    }
+
     toggles.forEach(function(toggle) {
         toggle.addEventListener('change', function() {
             if(toggle == toggles[0] && toggle.checked){
@@ -13,20 +20,22 @@ document.addEventListener('DOMContentLoaded', function(event) {
                 useTheme('Theme3');
                 localStorage.setItem('theme', 'Theme3');
             }
+
+            const preferred = localStorage.getItem('theme');
+        
+            if(preferred == 'Theme1') {
+                useTheme('Theme1');
+                toggle.checked = true;
+            }else if(preferred == 'Theme2'){
+                useTheme('Theme2');
+                toggle.checked = true;
+            }else if(preferred == 'Theme3') {
+                useTheme('Theme3');
+                toggle.checked = true;
+            }
         }, false);
     });
 
-    const preferred = localStorage.getItem('theme');
-    if(preferred == 'Theme1') {
-        useTheme('Theme1');
-        toggle[0].checked = true;
-    }else if(preferred == 'Theme2'){
-        useTheme('Theme2');
-        toggle[1].checked = true;
-    }else if(preferred == 'Theme3') {
-        useTheme('Theme2');
-        toggle[2].checked = true;
-    }
 });
 
 

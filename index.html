@@ -9,12 +9,17 @@
   <link rel="stylesheet" href="styles/desktopStyle.css" type="text/css">
   
   <title>Yehuda | Calculator app</title>
+<!-- DATA STRUCTURES -->
+  <script src="scripts/static/numbers.js"></script>
+  <script src="scripts/static/operators.js"></script>
 </head>
 <body>
 
 <main>
+  <div id="wrapper">
 
-  <div id="calculator">
+  </div>
+  <!-- <div id="calculator">
     <div id="calculator__theme">
       <span id="calculator__theme_name">calc</span>
       <div id="calculator__theme_toggleBtn">
@@ -37,7 +42,7 @@
         <input type="button" value="7" data-number />
         <input type="button" value="8" data-number />
         <input type="button" value="9" data-number />
-        <input type="button" value="DEL" id="del" name="del" data-delete/>
+        <input type="button" value="DEL" id="del" name="del" class="delete" />
       </div>
 
       <div class="calculator__numbers_line">
@@ -62,15 +67,28 @@
       </div>
       
       <div id="calculator__bottom_line">
-        <input type="button" value="RESET" data-reset />
-        <input type="button" value="=" data-sum />
+        <input type="button" value="RESET" class="reset" />
+        <input type="button" value="=" class="sum" />
       </div>
     </div>
-  </div>
+  </div> -->
 
-<script src="scripts/calculator.js"></script>
-<script src="scripts/toggleBtn.js"></script>
-<script src="scripts/theme.js"></script>
+  <script src="scripts/elements.js"></script>
+  <!-- CONTROLLERS -->
+  <script src="scripts/controllers/calculator.js"></script>
+  <!-- <script src="scripts/controllers/toggleBtn.js"></script>
+  <script src="scripts/controllers/theme.js"></script> -->
+
+  <!-- COMPONENTS -->
+  <script src="scripts/components/button.js"></script>
+  <script src="scripts/components/line.js"></script>
+  <script src="scripts/components/lines.js"></script>
+  
+  <!-- VIEWS -->
+  <script src="scripts/views/calculator.js"></script>
+
+
+  <script src="scripts/app.js"></script>
 </main>
 
 </body>

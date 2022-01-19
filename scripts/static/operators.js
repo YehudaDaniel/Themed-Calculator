@@ -1,0 +1,1 @@
+const operators = ['x', '+', '-', '/', 'del', 'reset'];

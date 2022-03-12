@@ -1,5 +1,6 @@
-document.addEventListener('DOMContentLoaded', function(event) {
-    const toggles = document.querySelectorAll('.toggleBtn__bar>input[type="radio"]');
+window.addEventListener('load', function(event) {
+    const toggles = document.querySelectorAll('.toggleBtn__bar>input[name="toggle"]');
+    console.log(toggles);
 
     if(localStorage.getItem('theme')) {
         useTheme(localStorage.getItem('theme'));

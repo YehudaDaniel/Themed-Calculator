@@ -1,4 +1,3 @@
-
 function Calculator(previousVal, currentVal) {
     //previous and current values to calculate
     this.previous = previousVal;

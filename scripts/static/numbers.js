@@ -35,4 +35,22 @@ const numberslines = [
             callback: () => '+'
         }
     ],
+    [
+        {
+            val: 1,
+            callback: () => 1
+        },
+        {
+            val: 2,
+            callback: () => 2
+        },
+        {
+            val: 3,
+            callback: () => 3
+        },
+        {
+            val: '-',
+            callback: () => '-'
+        }
+    ],
 ]

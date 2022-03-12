@@ -15,3 +15,14 @@ inputs.forEach(function(input) {
         }
     });
 });
+
+window.addEventListener("load", () => {
+    const chosenTheme = localStorage.getItem('theme');
+    if(chosenTheme == 'Theme1'){
+        littleDot.style.left = '0px';
+    }else if(chosenTheme == 'Theme2'){
+        littleDot.style.left = '30px';
+    }else if(chosenTheme == 'Theme3'){
+        littleDot.style.left = '65px';
+    }
+})

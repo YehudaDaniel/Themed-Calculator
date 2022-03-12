@@ -19,13 +19,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
     const preferred = localStorage.getItem('theme');
     if(preferred == 'Theme1') {
         useTheme('Theme1');
-        toggle[0].checked = true;
+        toggles[0].checked = true;
     }else if(preferred == 'Theme2'){
         useTheme('Theme2');
-        toggle[1].checked = true;
+        toggles[1].checked = true;
     }else if(preferred == 'Theme3') {
-        useTheme('Theme2');
-        toggle[2].checked = true;
+        useTheme('Theme3');
+        toggles[2].checked = true;
     }
 });
 
